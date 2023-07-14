@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+}
+header {
+    display: flex;
+    background-color: rgb(70, 98, 173);
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+nav{
+    background-color: aqua;
+    display: flex;
+}
+nav ul li {
+    display: inline-flex;
+}
+.nav-btn{
+    padding: auto;
+}
+
+#my_photo {
+    margin-left: 1%;
+}
+
+.section {
+    margin: 2%;
+    height: 500px;
+}
