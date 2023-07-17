@@ -1,9 +1,15 @@
 .intro{
-    display:flex
+    display:flex;
 }
 
 .contact-info{
     display: flex;
+    margin-top: 3%;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    position:relative;
 }
 .section {
     max-width: 21cm;
@@ -15,8 +21,20 @@
     padding: 1%;
 }
 
+
 .photo{
     justify-content: flex-end;
+    position:absolute;
+    left:auto;
+    top :0px;
+    right:0px;
+    z-index: 100;
+    max-width: 200px;
+    max-height: 200px;
+    /* display: block; */
+    margin-top: 2%;
+    margin-right: 2%;
+    
 }
 
 .contact {
@@ -33,7 +51,37 @@
     background-color: aliceblue;
     margin: 10px;
     max-width: fit-content;
+    vertical-align: middle;
+    max-height: 40px;
+    text-align: center;
     inset-inline: 10px;
     border-radius: 5px;
     padding-inline: 10px;
+    display: table-cell;
+    line-height: 10px;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin-top: 0px;
+    margin: 4px;
+}
+
+.ticked{
+    background-color: rgb(20, 71, 96);
+}
+
+.unticked {
+    background-color: antiquewhite;
+}
+
+.lang{
+    position:relative;
+}
+.markers {
+    display: flex;
+    position: absolute;
+    top: 100%;
 }
