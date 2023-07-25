@@ -5,45 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class = 'wrapper'>
+        <div class = 'title'>
 
-    <h2>Enter the following data</h2>
-    <div class = 'form'>
-        <form name = "userDetails" onsubmit="return validateForm()" method = 'post' action="">
-            <div>
-                <label for="username">Enter username</label>
-
-                <input type="text" name="username" id="username" required>
-            </div>
-            <div>
-                <label for="email">Enter email</label>
-                <input type="text" name = "email" id = "email" required>
-            </div>
-
-            <div>
-                <label for="phno">Enter phone number</label>
-                <input type="text" name="phno" id="phno" required>
-           </div>
-
-            <div>
-                <label for="password">Enter password</label>
-                <input type="password" name = "password" id = "password" required>
-            </div>
-           
-           <div>
-                <label for="confirmpassword">Confirm your password</label>
-                <input type="password" name = "confirmpassword" id = "confirmpassword" required>
-           </div>
-            <div>
-                <input type="submit" name = "submit-btn" id = "submit-btn" value="Submit">
-    
-            </div>        
-        </form>
+            <h2>Enter the following data</h2>
+        </div>
+        <div class = 'form'>
+            <form name = "userDetails" onsubmit="return validateForm()" method = 'post' action="">
+                <div class = 'username input'>
+                    <div class = 'field'>
+                            <i class="fa fa-user" aria-hidden="true"></i>                    
+                            <!-- <label for="username">Enter username</label> -->
+                            <input type="text" name="username" id="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class = 'email input'>
+                   <div class = 'field'>
+                     <i class="fa fa-envelope" aria-hidden="true"></i>
+                     <!-- <label for="email">Enter email</label> -->
+                     <input type="text" name = "email" id = "email"  placeholder = "Email-ID" required>
+                   </div>
+                </div>
+        
+                <div class = 'phno input'>
+                   <div class = 'field'>
+                     <i class="fa fa-phone-square" aria-hidden="true"></i>
+                     <!-- <label for="phno">Enter phone number</label> -->
+                     <input type="text" name="phno" id="phno" placeholder = "Phone Number" required>
+                   </div>
+               </div>
+        
+                <div class = 'password input'>
+                   <div class = 'field'>
+                     <i class="fa fa-key" aria-hidden="true"></i>
+                     <!-- <label for="password">Enter password</label> -->
+                     <input type="password" name = "password" id = "password" placeholder = "Password" required>
+                   </div>
+                </div>
+               
+               <div class  = 'confirmpassword input'>
+                   <div class = 'field'>
+                     <i class="fa fa-check-circle" aria-hidden="true"></i>
+                     <!-- <label for="confirmpassword">Confirm your password</label> -->
+                     <input type="password" name = "confirmpassword" id = "confirmpassword" placeholder = "Confirm your password" required>
+                   </div>
+               </div>
+                <div class = 'submit-btn'>
+                    <input type="submit" name = "submit-btn" id = "submit-btn" value="Submit">
+        
+                </div>        
+            </form>
+        </div>
+        
+        <div class = 'output'>
+            <div class = "successMessage" id = "successMessage" name = "successMessage">Form submitted successfully!</div>
+            
+        </div>        
     </div>
-
-    <div class = "successMessage" id = "successMessage" name = "successMessage">Form submitted successfully!</div>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>
