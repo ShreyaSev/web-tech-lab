@@ -30,7 +30,7 @@ function checkString({word = "test" , category = "password"} = {}){
     }
 
     else if (category=="phone"){
-        var pattern = /^[+]{1}+(?=.*[0-9])$/;
+        var pattern = /^[+]{1}(?=.*[0-9])+$/;
     }
 
     else {
