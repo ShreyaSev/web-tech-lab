@@ -4,7 +4,10 @@ function getDOMelements(){
     let password = document.forms['userDetails']['password'];
     let phno = document.forms['userDetails']['phno'];
     let password_confirmation = document.forms['userDetails']['confirmpassword'];
-    return username, email, password, phno, password_confirmation
+    let successMessage = document.getElementsByName("successMessage")[0];
+    // let successMessage = document['successMessage'];
+    console.log(successMessage);
+    return username, email, password, phno, password_confirmation,successMessage;
 }
 
 function checkLength(s){
@@ -88,7 +91,7 @@ function validatePasswordConfirmation(password, confirmpassword){
 }
 
 function validateForm(){
-    username, email, password, phno, password_confirmation = getDOMelements();
+    username, email, password, phno, confirmpassword,successMessage = getDOMelements();
     if (!validatePasswordConfirmation(password.value, confirmpassword.value) || !validatePassword(password.value) || !validatePhone(phno.value) || !validateEmail(email.value)|| !validateUsername(username.value) ){
         if (!validateUsername(username.value)){
             alert("Invalid username. Username should be between 3-20 characters long and contain only letters and numbers. ");
@@ -130,8 +133,9 @@ function validateForm(){
         }
     }
     else {
+        successMessage.style.display = "block";
         console.log("success");
-        return true;
+        return false;
     }
 }
 

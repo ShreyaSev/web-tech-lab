@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
     <h2>Enter the following data</h2>
     <div class = 'form'>
-        <form name = "userDetails" onsubmit="return validateForm()" method = 'post'>
+        <form name = "userDetails" onsubmit="return validateForm()" method = 'post' action="">
             <div>
                 <label for="username">Enter username</label>
 
@@ -40,6 +41,9 @@
             </div>        
         </form>
     </div>
+
+    <div class = "successMessage" id = "successMessage" name = "successMessage">Form submitted successfully!</div>
+
     <script src="scripts/main.js"></script>
 </body>
 </html>
