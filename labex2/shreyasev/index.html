@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h2>Enter the following data</h2>
+    <div class = 'form'>
+        <form name = "userDetails" onsubmit="return validateForm()" method = 'post'>
+            <div>
+                <label for="username">Enter username</label>
+
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="email">Enter email</label>
+                <input type="text" name = "email" id = "email" required>
+            </div>
+
+            <div>
+                <label for="password">Enter password</label>
+                <input type="password" name = "password" id = "password" required>
+            </div>
+           <div>
+                <label for="phno">Enter phone number</label>
+                <input type="text" name="phno" id="phno" required>
+           </div>
+           <div>
+                <label for="confirmpassword">Confirm your password</label>
+                <input type="password" name = "confirmpassword" id = "confirmpassword" required>
+           </div>
+            <div>
+                <input type="submit" name = "submit-btn" id = "submit-btn" value="Submit">
+    
+            </div>        
+        </form>
+    </div>
+    <script type = "text/javascript" src="main.js"></script>
+</body>
+</html>
