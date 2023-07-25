@@ -37,7 +37,6 @@ function checkString({word = "test" , category = "password"} = {}){
         return null;
     }
     if (pattern.test(word)){
-        console.log("result is true");
         return true;
     }
     else {
@@ -67,7 +66,6 @@ function validatePassword(password){
 
 function validatePhone(phone){
     let l = checkLength(phone);
-    console.log(l)
     if (l==14){
         return checkString({word:phone,category:"phone"});
     }
@@ -91,12 +89,49 @@ function validatePasswordConfirmation(password, confirmpassword){
 
 function validateForm(){
     username, email, password, phno, password_confirmation = getDOMelements();
-    if (validatePasswordConfirmation(password.value, confirmpassword.value)) {
+    if (!validatePasswordConfirmation(password.value, confirmpassword.value) || !validatePassword(password.value) || !validatePhone(phno.value) || !validateEmail(email.value)|| !validateUsername(username.value) ){
+        if (!validateUsername(username.value)){
+            alert("Invalid username. Username should be between 3-20 characters long and contain only letters and numbers. ");
+            username.focus();
+            password.value="";
+            confirmpassword.value="";
+            return false;
+        }
+        else if(!validateEmail(email.value)){
+            alert("Invalid email. Re-enter email id!");
+            email.focus();
+            password.value = "";
+            confirmpassword.value = "";
+            return false;
+        }
 
+        else if (!validatePhone(phno.value)){
+            alert("Invalid phone number. It has to be of the format \'+91 9876543210\'");
+            phno.focus();
+            password.value = "";
+            confirmpassword.value = ""
+            return false;
+        }
+        
+        else if (!validatePassword(password.value)){
+            alert("Password has to be at least 8 characters and should contain  at least one lowercase alphabet, one uppercase alphabet, one special character and one number.");
+            password.focus();
+            password.value = "";
+            confirmpassword.value = "";
+            return false;
+        }
+        
+        else if (!validatePasswordConfirmation(password.value, confirmpassword.value)){
+            alert("Password does not match. Re-enter!");
+            confirmpassword.focus();
+            password.value = "";
+            confirmpassword.value = "";
+            return false;
+        }
     }
     else {
-        alert("Re-enter password again!");
-        confirmpassword.focus();
-
+        console.log("success");
+        return true;
     }
 }
+
