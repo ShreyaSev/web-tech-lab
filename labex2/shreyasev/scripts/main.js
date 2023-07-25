@@ -1,9 +1,9 @@
 function getDOMelements(){
-    let username = document.forms['userDetails']['username'].value;
-    let email = document.forms['userDetails']['email'].value;
-    let password = document.forms['userDetails']['password'].value;
-    let phno = document.forms['userDetails']['phno'].value;
-    let password_confirmation = document.forms['userDetails']['confirmpassword'].value;
+    let username = document.forms['userDetails']['username'];
+    let email = document.forms['userDetails']['email'];
+    let password = document.forms['userDetails']['password'];
+    let phno = document.forms['userDetails']['phno'];
+    let password_confirmation = document.forms['userDetails']['confirmpassword'];
     return username, email, password, phno, password_confirmation
 }
 
@@ -15,7 +15,6 @@ function checkLength(s){
 // this function checks if a given string matches the conditions provided for a category
 // categories - password, username, email, phone number
 function checkString({word = "test" , category = "password"} = {}){
-    console.log(category);
     if (category=="username"){
         var pattern = /[^0-9a-zA-Z]/; //if a non alphanumeric character is found, return False
         
@@ -30,7 +29,7 @@ function checkString({word = "test" , category = "password"} = {}){
     }
 
     else if (category=="phone"){
-        var pattern = /^[+]{1}(?=.*[0-9])+$/;
+        var pattern = /^[+][9][1]\ [0-9]+$/;
     }
 
     else {
@@ -38,6 +37,7 @@ function checkString({word = "test" , category = "password"} = {}){
         return null;
     }
     if (pattern.test(word)){
+        console.log("result is true");
         return true;
     }
     else {
@@ -67,7 +67,8 @@ function validatePassword(password){
 
 function validatePhone(phone){
     let l = checkLength(phone);
-    if (l==13){
+    console.log(l)
+    if (l==14){
         return checkString({word:phone,category:"phone"});
     }
     else {
@@ -79,6 +80,23 @@ function validateEmail(email){
     return checkString({word : email, category:"email"});
 }
 
+function validatePasswordConfirmation(password, confirmpassword){
+    if (password===confirmpassword){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 function validateForm(){
     username, email, password, phno, password_confirmation = getDOMelements();
+    if (validatePasswordConfirmation(password.value, confirmpassword.value)) {
+
+    }
+    else {
+        alert("Re-enter password again!");
+        confirmpassword.focus();
+
+    }
 }
