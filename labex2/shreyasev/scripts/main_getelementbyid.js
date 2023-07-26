@@ -1,10 +1,10 @@
 function getDOMelements(){
-    let username = document.forms['userDetails']['username'];
-    let email = document.forms['userDetails']['email'];
-    let password = document.forms['userDetails']['password'];
-    let phno = document.forms['userDetails']['phno'];
-    let password_confirmation = document.forms['userDetails']['confirmpassword'];
-    let successMessage = document.getElementsByName("successMessage")[0];
+    let username = document.getElementById("username");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let phno = document.getElementById("phno");
+    let password_confirmation = document.getElementById("confirmpassword");
+    let successMessage = document.getElementById("successMessage");
     // let successMessage = document['successMessage'];
     console.log(successMessage);
     return username, email, password, phno, password_confirmation,successMessage;
