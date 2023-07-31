@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/personaltheme.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+    <link id = "stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&family=Rubik:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <title>My CV</title>
+</head>
+<body ng-app = "myApp"  ng-controller="MainController">
+    <button ng-click="toggleMode()">
+        <i class="fa fa-moon-o fa-3x"></i>
+    </button>
+
+    <header class = 'section header'>
+        <div class = "intro">
+            <div class = 'bio-text'>
+                <h1 class = 'name'>Shreya Sevelar</h1>
+                <p class="bio">A third year engineering student with an inquisitive mind and a thirst for
+                    knowledge. A smart worker capable of easily adapting to changing
+                    environments. Looking forward to exploring a career in data science and ML.</p>
+            </div>
+            <img class = 'photo' src = "static/me2.jpg" alt="profile photo">
+
+        </div>
+        
+        
+        <div class = "contact-info">
+            <div>
+                <div class ='contact no'>
+                <i class="fa fa-address-book" aria-hidden="true"></i> <span>+91 8939254357</span>
+                </div>
+                <div class = 'contact email'>
+                <i class="fa fa-envelope" aria-hidden="true">  </i> <span>shreya21110440@snuchennai.edu.in</span>
+                </div>
+            </div>
+            <div>
+                <div class = 'contact location'>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> <span>Chennai, India</span>
+                </div>
+                <div class = 'contact linkedin'>
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/shreya-sevelar-07a762259/"> Linkedin</a>            
+                </div>
+            </div>
+            <div>
+                <div class = 'contact github'>
+                    <i class="fa fa-github" aria-hidden="true"> </i><a href="https://github.com/ShreyaSev"> Github</a>
+                </div>
+                <div class = 'contact twitter'>
+                    <i class="fa fa-twitter-square" aria-hidden="true"> </i><a href="TWITTERLINK"> Twitter</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class = 'section cv-highlights'>
+        <h2>Career Highlights</h2>
+        <ul>
+            <li>Completed a summer internship at IIT Bombay working on corpus creation for AyurHealth GPT</li>
+            <li>Got selected for NIT Trichy DataNetiix Hackathon</li>
+            <li>Received the Most Outgoing Girl Student Award in high school</li>
+            <li>Head of the Dance Club in college</li>
+            <li>Treasurer of Rotoract Club in senior school</li>
+        </ul>
+    </div>
+
+    <div class = 'section skills'>
+        <h2>Skills</h2>
+        <div class = 'skills-section'>
+            <div class = 'rectangle'>
+                <p>Leadership</p>
+            </div>
+            <div class = 'rectangle'>
+                <p>Communication</p>
+            </div> 
+            <div class = 'rectangle'>
+                <p>Problem Solving</p>
+            </div> 
+            <div class = 'rectangle'>
+                <p>Decision Making</p>
+            </div> 
+            <div class = 'rectangle'>
+                <p>Work Ethic</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="section programming_languages">
+        <h2>Programming Languages</h2>
+        <div class="lang">
+            <h3>Python</h3>
+            <hr class = 'divider'>
+            <div class = ' markers'>
+                
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+
+                <div class="circle ticked"> </div>
+            </div>
+        </div>
+        <div class="lang">
+            <h3>C</h3>
+            <hr class = 'divider'>
+            <div class = ' markers'>
+                
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+
+                <div class="circle unticked"> </div>
+            </div>
+        </div>
+
+        <div class="lang">
+            <h3>HTML/CSS</h3>
+            <hr class = 'divider'>
+            <div class = ' markers'>
+                
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle unticked"> </div>
+
+                <div class="circle unticked"> </div>
+            </div>
+        </div>
+        <div class="lang">
+            <h3>JavaScript</h3>
+            <hr class = 'divider'>
+            <div class = ' markers'>
+                
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle unticked"> </div>
+                <div class="circle unticked"> </div>
+
+                <div class="circle unticked"> </div>
+            </div>
+        </div>
+        <div class="lang">
+            <h3>SQL</h3>
+            <hr class = 'divider'>
+            <div class = ' markers'>
+                
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle ticked"> </div>
+                <div class="circle unticked"> </div>
+
+                <div class="circle unticked"> </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class = 'section education_bg'>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <th>Qualification</th>
+                <th>Institute</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Graduation</td></sup></td>
+                    <td>Shiv Nadar University, Chennai</td>
+                    <td>State Private University</td>
+                    <td>8.8 CGPA</td>
+                    <td>Ongoing</td>
+                </tr>
+                <tr>
+                    <td>High School</sup></td>
+                    <td>Bhavan's Rajaji Vidyashram</td>
+                    <td>CBSE</td>
+                    <td>97.4%</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>10<sup>th</sup></td>
+                    <td>Bhavan's Rajaji Vidyashram</td>
+                    <td>CBSE</td>
+                    <td>97%</td>
+                    <td>2019</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class = 'section frame'>
+        <h2>Languages</h2>
+
+        <iframe src = 'frame.html' title = 'References'></iframe>
+    </div> 
+</body>
+</html>
