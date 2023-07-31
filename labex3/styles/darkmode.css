@@ -174,9 +174,14 @@ h3 {
 
 iframe {
     width : 100%;
-    background-color: white;    
+    background-color: black; 
+    border: 2px solid rgb(77, 74, 74); 
 }
 
 .reference {
-    color:white;
+    color:aliceblue;
+}
+
+.frame_color{
+    background-color: black;
 }
