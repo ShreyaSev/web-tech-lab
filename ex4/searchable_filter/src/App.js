@@ -85,4 +85,6 @@ pros of searchable filter:
 cons of searchable filter:
 1. in the current implementation, if two departments contain the filter substring they both are shown in the results, eg. if you search for it, IT dept as well as Editing dept show up. 
 2. In order to fix this, you need to only search for exact match - which can lead to errors, also we need to implement an event handler to search only on enter key press - increases complexity
+
+Therefore, use dropdown in cases where filter text is less in number and known to us. Else, use searchable filter.
 */
