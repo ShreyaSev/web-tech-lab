@@ -1,6 +1,6 @@
 html, body {
-  height:100%;
-  width:100%;
+  /* height:100%;
+  width:100%; */
   margin:0;
   padding:0;
 }
@@ -8,30 +8,75 @@ html, body {
 
 .header{
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
+  /* width: 100%; */
+  justify-content: space-between;
   box-shadow: 0 0 20px 0;
   border-color: darkgrey;
-  padding-bottom: 0%;
+  padding: 3%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .navBar {
   display: flex;
   padding-left: 200px;
-  background-color: aqua;
-  margin-right: 0px;
-  float: right;
+  margin-right: 30px;
+  /* float: right; */
+  align-self: flex-end;
   margin-bottom: 0px;
 
 }
 .title{
-  margin-right: 700px;
+  color: brown;
+  align-self: flex-start;
+  margin-left: 7%;
 }
 .nav-btn{
   margin: 20px;
+  text-decoration: none;
 }
 
 .home-tab {
   padding: 10%;
   padding-top: 5%;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Button background color */
+  color: rgb(118, 114, 114); /* Button text color */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Adding transitions for hover effect */
+}
+
+.link:hover {
+  transform: scale(1.05); /* Slight scale increase on hover for a button press effect */
+  color: red;
+}
+
+h2{
+  font-size: 175%;
+}
+
+ul{
+  font-size: larger;
+}
+
+.text-box{
+  padding:3%;
+  margin-bottom: 3%;
+  border-radius: 20px; /* Adjust as needed for the desired corner roundness */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, and shadow color */
+}
+
+.box1{
+  display: flex;
 }
