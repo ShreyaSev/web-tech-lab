@@ -30,7 +30,7 @@ html, body {
 
 }
 .title{
-  color: brown;
+  color: red;
   align-self: flex-start;
   margin-left: 7%;
 }
@@ -64,19 +64,106 @@ html, body {
 
 h2{
   font-size: 175%;
+  color: red;
 }
 
 ul{
-  font-size: larger;
+  font-size: 1.3em;
+  line-height: 3.6;
+  color: #333;
 }
 
 .text-box{
   padding:3%;
+  padding-right: 7%;
+  padding-bottom: 3%;
   margin-bottom: 3%;
+  margin: 2%;
   border-radius: 20px; /* Adjust as needed for the desired corner roundness */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, and shadow color */
 }
 
 .box1{
   display: flex;
+}
+
+.para{
+    padding: 2%;
+    font-size: 2em;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .small{
+    font-size: 1.2em;
+  }
+  
+
+  .info-btn{
+  display: flex;
+  /* padding: 10px 20px; */
+  background-color: red; /* Button background color */
+  color: white; /* Button text color */
+  font-size: larger;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  height: 2cm;
+  width : 4cm;
+  transition: background-color 0.3s, transform 0.3s; /* Adding transitions for hover effect */
+        
+  }
+
+  .info-btn:hover {
+  background-color: white; /* Button background color on hover */
+  color: red; /* Button text color on hover */
+  box-shadow: 0 0 10px red;
+  }
+
+.info-div{
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.services-body{
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.block{
+  display: flex;
+}
+
+.list-block{
+  margin: 10%;
+}
+
+.smaller{
+  width: 20%; /* Adjust as needed to make the textbox narrower */
+  height: max-content;
+  align-self: center;
+  margin-left: auto; /* Pushes the textbox to the right of the parent */
+}
+
+.red{
+  color: red;
+  line-height: 2.0;
+}
+
+
+.red li:hover{
+  border-radius: 10%;
+  transition: background-color 0.3s, transform 0.3s; /* Adding transitions for hover effect */
+
+  background-color: lightgray;
 }
