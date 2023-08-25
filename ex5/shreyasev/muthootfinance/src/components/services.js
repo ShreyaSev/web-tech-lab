@@ -20,12 +20,26 @@ function Services() {
                         <li>GOLD LOAN</li>
                         <li>PERSONAL LOAN</li>
                     </div>
+                    <div className="list-block">
+                        <li>NCD</li>
+                        <li>MUTUAL FUNDS</li>
+                        <li>PAN CARD</li>
+                        <li>MICRO FINANCE</li>
+                        <li>DIGITAL&CASHLESS</li>
+                        
+                    </div>
+
+                    <div className="list-block">
+                        <li>VEHICLE LOAN</li>
+                        <li>CORPORATE LOAN</li>
+                        <li>SME LOAN</li>
+                        <li>MILLIGRAM REWARDS</li>
+                        <li>#BHAROSA INDIA KA</li>
+                        
+                    </div>
                 </ul>
             </div>
-            <div className="text-box smaller">
-                <h1>India's Number 1 Most Trusted Financial Services Brand</h1>
-                <p className="para small">Bringing joy to millions through a diversified product portfolio, setting benchmarks for quality services, customer relationships and management processes.</p>
-            </div>
+
         </div>
     )
 }
