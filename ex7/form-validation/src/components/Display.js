@@ -1,6 +1,6 @@
 function Display(props){
     return(
-        <h1>{props.message}</h1>
+        <h1 style={{ userSelect: 'none' }}>{props.message}</h1>
     )
 }
 

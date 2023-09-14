@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-.input-field{
-  text-align: left;
-}
-.button{
-  margin: 3%;
-}
-.input-fields{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
