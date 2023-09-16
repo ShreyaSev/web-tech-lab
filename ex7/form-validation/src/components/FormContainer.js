@@ -4,7 +4,10 @@ import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
-function FormContainer(){
+function FormContainer(props){
+
+const USERS = {"Shreya": '1Password',
+                'user2':'notPassword2'}
 
 let defaultFormData = {
     name:'',
@@ -15,7 +18,16 @@ let defaultFormData = {
 let navigate = useNavigate()
 
 let [formData,setFormData] = useState(defaultFormData);
-let [validation,setValidation] = useState('false');
+let [passwordValidation,setPasswordValidation] = useState('false');
+let validation= false;
+const checkDatabase = (name,password) =>{
+    if (USERS[name]==password){
+        validation = true;
+    }
+    else{
+        validation = false;
+    }
+}
 
 const handleChange=(e)=>{
     e.preventDefault();
@@ -30,10 +42,10 @@ const validatePassword = () =>{
         let upperCase = new RegExp("(?=.*[A-Z])");
         let numeric = new RegExp("(?=.*[0-9])");
         if (lowerCase.test(password) && upperCase.test(password) && numeric.test(password)) {
-            setValidation(true)
+            setPasswordValidation(true)
             return true;
         } else {
-            setValidation(false)
+            setPasswordValidation(false)
             return false;
         }
 }
@@ -44,43 +56,54 @@ const handlePasswordChange = (e) =>{
 }
 
 const handleSubmit = (e) =>{
-    if (validation===true){
+    if (passwordValidation===true){
         if (formData.name!=='' && formData.email!==''){
-            navigate('/welcome');
+            checkDatabase(formData.name,formData.password);
+            if (validation===true){
+                navigate('/welcome');
+            }
+
+            else{
+                e.preventDefault();
+                setFormData(defaultFormData);
+                props.setFlag(false)
+            }
         }
     }
 }
 
-let displayStyle = {display: validation? "none":"block",
+let displayStyle = {display: passwordValidation? "none":"block",
                     flexShrink:0};
 
 return(
     <div className='form'>
         <div className='input-fields'>
             <Form onSubmit={handleSubmit}>
-                <FormGroup className='input-field' controlId='name'>
+                <FormGroup className='input-field' >
                     <Form.Label htmlFor='name' style={{ userSelect: 'none' }}>Name</Form.Label>
                     <Form.Control
                         type='text'
                         id='name'
                         placeholder='John Doe'
-                        onChange={handleChange} required={"required"}>
+                        onChange={handleChange} required={"required"}
+                        value={formData.name}>
                         
                     </Form.Control>
                 </FormGroup>
                 
-                <FormGroup className='input-field' controlId='email'>
+                <FormGroup className='input-field' >
                     <Form.Label htmlFor='email' style={{ userSelect: 'none' }}>Email</Form.Label>
                     <Form.Control
                         type='email'
                         id='email'
                         placeholder='example@email.com'
-                        onChange={handleChange} required>
+                        onChange={handleChange}
+                        value={formData.email} required>
                     
                     </Form.Control>
                 </FormGroup>
                 
-                <FormGroup className='input-field' controlId='password'>
+                <FormGroup className='input-field' >
                     <Form.Label htmlFor='password' style={{ userSelect: 'none' }}>Password</Form.Label>
                     <Form.Control
                         type='password'
@@ -89,6 +112,7 @@ return(
                         aria-describedby='passwordHelpBlock'
                         onChange={handlePasswordChange}
                         onBlur={validatePassword} 
+                        value={formData.password}
                         required>
                     
                     </Form.Control>
